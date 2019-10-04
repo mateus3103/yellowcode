@@ -1,0 +1,89 @@
+.page-header .modal-dialog .modal-content .modal-body {
+    background-color: #000;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: yellow;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.btn-success{
+    color: #fff;
+    background-color: #ECF008;
+    border-color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.date {
+    color: yellow;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #yellow;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: yellow;
+}
+
+.header {
+    margin: 0 0;
+}
+.header .pure-menu {
+    padding: 35;
+    background-color: black;
+}
+.header .pure-menu a {
+    color: yellow;
+}
+.header .pure-menu li a:hover,
+.header .pure-menu li a:focus {
+    background: none;
+    border: none;
+    color: yellow;
+}
+.header .pure-menu-heading {
+    float: center;
+    font-size: 30;
+}
+.header ul {
+    float: right;
+    float: middle;
+}
+.pure-menu-selected a {
+    color: yellow;
+    float: right;
+    font-size: 20;
+}
+.modal-dialog .modal-content .modal-body .container txt-box {
+    color: yellow;
+    float: right;
+    font-size: 60;
+    font-family: 'Lexend Deca', sans-serif;
+}

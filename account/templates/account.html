@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+    {% if user.is_authenticated %}
+    <h2><strong>Welcome to your profile page</strong></h2>
+    <img src="{{ user.profile.photo.url }}" width = "150" height = "150"/>
+    <p>"{{ user.profile.bio }}"</p>
+    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>Born in: {{ user.profile.birth_date }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Location: {{ user.profile.location }}</p>
+    <p>Phone Number: {{ user.profile.phone_number }}</p>
+    <a class="btn btn-outline-warning btn-sm" href="{% url 'edit_info' %}">Edit Info</a>
+    {% endif %}
+{% endblock %}
+
+{% block content2 %}
+<h2><strong>My posts</strong></h2>
+{% for post in posts %}
+{% if user == post.author %}
+    <div class="post">
+        <div class="date">
+            {{ post.published_date }}
+                <a class="btn btn-outline-warning btn-sm" href="{% url 'post_edit' pk=post.pk %}">Edit</i>
+                <a class="btn btn-outline-danger btn-sm" href="{% url 'post_delete' pk=post.pk %}">Delete</a>
+        </div>
+        <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.photo %}
+        <img src="{{ post.photo.url }}" width = "200" height = "200"/>
+        {% endif %}
+        <span class="badge badge-pill badge-warning">{{ post.author }}</span>
+    </div>
+{% endif %}
+{% endfor %}
+{% endblock %}

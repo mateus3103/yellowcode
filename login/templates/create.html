@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Create User</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+</head>
+<body>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="container txt-box">
+                <form method='POST'>
+                    <h1>Sign up to begin</h1></br>
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button class="btn btn-success" type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

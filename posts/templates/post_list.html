@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+                {% if user.is_superuser or user == post.author %}
+                    <a class="btn btn-outline-warning btn-sm" href="{% url 'post_edit' pk=post.pk %}">Edit</i>
+                    <a class="btn btn-outline-danger btn-sm" href="{% url 'post_delete' pk=post.pk %}">Delete</a>
+                {% endif %}
+            </div>
+            <p>{{ post.text|linebreaksbr }}</p>
+            {% if post.photo %}
+            <img src="{{ post.photo.url }}" width = "200" height = "200"/>
+            {% endif %}
+            <span class="badge badge-pill badge-warning">{{ post.author }}</span>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block content2 %}
+    <h2>New post</h2>
+        <form method="POST" class="post-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-outline-success">Post</button>
+        </form>
+{% endblock %}

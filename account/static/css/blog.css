@@ -1,0 +1,110 @@
+.page-header {
+    background-color: #000;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: yellow;
+    font-size: 40pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: black;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.date {
+    color: black;
+    font-size: 10pt;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: yellow;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: yellow;
+}
+
+.header {
+    margin: 0 0;
+}
+.header .pure-menu {
+    padding: 35;
+    background-color: black;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.header .pure-menu a {
+    color: yellow;
+}
+.header .pure-menu li a:hover,
+.header .pure-menu li a:focus {
+    background: none;
+    border: none;
+    color: yellow;
+}
+.header .pure-menu-heading {
+    float: center;
+    font-size: 45;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.header ul {
+    float: right;
+}
+.pure-menu-selected a {
+    color: yellow;
+    float: right;
+    font-size: 20;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+    line-height: 1.42857143;
+    color: yellow;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #000;
+    margin: 0 0 10px;
+}
+
+.navbar-dark .navbar-brand {
+    color: yellow;
+    font-size: 45;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.badge-warning {
+    color: black;
+    background-color: yellow;
+}
+
+.bg-dark {
+    background-color: black!important;
+}
